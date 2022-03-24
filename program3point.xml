@@ -1,0 +1,30 @@
+<ETHERNETKRL>
+	<CONFIGURATION>
+		<EXTERNAL>
+			<TYPE>Client</TYPE>
+		</EXTERNAL>
+		<INTERNAL>
+			<IP>172.31.1.147</IP>
+			<PORT>54600</PORT>
+			<ALIVE Set_Flag="1"/>
+		</INTERNAL>
+	</CONFIGURATION>
+	<RECEIVE>
+		<XML>
+			<ELEMENT Tag="NodeRed/X" Type="REAL" Set_Flag="10"/>
+			<ELEMENT Tag="NodeRed/Y" Type="REAL" Set_Flag="11"/>
+			<ELEMENT Tag="NodeRed/Z" Type="REAL" Set_Flag="12"/>
+                  <ELEMENT Tag="NodeRed/posinit" Type="REAL" Set_Flag="13"/>
+		</XML>
+	</RECEIVE>
+	<SEND>
+		<XML>
+			<ELEMENT Tag="Robot/Data/LastPos/@X"/>
+			<ELEMENT Tag="Robot/Data/LastPos/@Y"/>
+			<ELEMENT Tag="Robot/Data/LastPos/@Z"/>
+			<ELEMENT Tag="Robot/Data/LastPos/@A"/>
+			<ELEMENT Tag="Robot/Data/LastPos/@B"/>
+			<ELEMENT Tag="Robot/Data/LastPos/@C"/>
+		</XML>
+	</SEND>
+</ETHERNETKRL>
